@@ -14,37 +14,39 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   static String tips0 = 'Cilck on bottom button ';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       home: Scaffold(
         backgroundColor: Colors.cyan,
         body: Center(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text(
-                '$tips0',
-                textAlign: TextAlign.center,
-                style: textStyle,
+          child: Expanded(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  '$tips0',
+                  textAlign: TextAlign.center,
+                  style: textStyle,
+                ),
               ),
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            setState(
-              () {
-                tips0 = DataClass.tips1;
-                DataClass.tips1 = DataClass.tips2;
-                DataClass.tips2 = DataClass.tips3;
-                DataClass.tips3 = DataClass.tips4;
-                DataClass.tips4 = DataClass.tips5;
-                DataClass.tips5 = DataClass.tips1;
-              },
-            );
+            setState(() {
+              tips0 = DataClass.tips1;
+              DataClass.tips1 = DataClass.tips2;
+              DataClass.tips2 = DataClass.tips3;
+              DataClass.tips3 = DataClass.tips4;
+              DataClass.tips4 = DataClass.tips5;
+              DataClass.tips5 = DataClass.tips6;
+              DataClass.tips6 = DataClass.tips7;
+              DataClass.tips7 = DataClass.tips1;
+            });
           },
           child: Icon(
             Icons.favorite,
