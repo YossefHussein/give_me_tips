@@ -4,6 +4,6 @@ TextStyle textStyle = TextStyle(
   color: Colors.white,
   fontStyle: FontStyle.italic,
   fontSize: 20,
-  fontWeight: FontWeight.w900,
+  fontWeight: FontWeight.bold,
   fontFamily: 'Pangolin',
 );

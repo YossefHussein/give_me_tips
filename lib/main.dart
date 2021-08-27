@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:give_me_tips/data/data.dart';
 import 'design/assets.dart';
@@ -8,12 +10,15 @@ void main() {
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  static String tips0 = 'Cilck on bottom button ';
+  String tips0 = 'Cilck on bottom button ';
+  final _random = new Random();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -38,14 +43,8 @@ class _MyAppState extends State<MyApp> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
-              tips0 = DataClass.tips1;
-              DataClass.tips1 = DataClass.tips2;
-              DataClass.tips2 = DataClass.tips3;
-              DataClass.tips3 = DataClass.tips4;
-              DataClass.tips4 = DataClass.tips5;
-              DataClass.tips5 = DataClass.tips6;
-              DataClass.tips6 = DataClass.tips7;
-              DataClass.tips7 = DataClass.tips1;
+              tips0 =
+                  DataClass.AllText[_random.nextInt(DataClass.AllText.length)];
             });
           },
           child: Icon(
