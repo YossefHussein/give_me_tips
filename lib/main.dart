@@ -16,14 +16,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String tips0 = 'Cilck on bottom button ';
-  final _random = new Random();
+  String tips0 = 'Click on bottom button ';
+  final _random = Random();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
       home: Scaffold(
         backgroundColor: Colors.cyan,
         body: Center(
@@ -43,15 +42,14 @@ class _MyAppState extends State<MyApp> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
-              tips0 =
-                  DataClass.AllText[_random.nextInt(DataClass.AllText.length)];
+              tips0 = DataClass.AllText[_random.nextInt(DataClass.AllText.length)];
             });
           },
           child: Icon(
             Icons.favorite,
             color: Colors.pinkAccent,
             size: 24.0,
-            semanticLabel: 'Cilck me',
+            semanticLabel: 'Click me',
           ),
         ),
       ),
