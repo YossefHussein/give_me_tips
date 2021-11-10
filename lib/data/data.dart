@@ -12,4 +12,5 @@ class DataClass {
     'Find Inner Serenity by Making it Easier to Find Your Keys. For most people, getting control of clutter brings a greater sense of calm and decreased frustration.',
     'Surround Yourself With Progress. When you complete a list of action steps, your instinct might be to throw the list away. After all, the work is completed! However, some creative professional teams take a different approach; they relish their progress. Some go so far as surrounding themselves with it.'
   ];
+ static String tips0 = 'Click on bottom button ';
 }

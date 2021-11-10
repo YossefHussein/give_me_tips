@@ -63,7 +63,7 @@ flutter:
   fonts:
    - family: DancingScript
      fonts:
-      - asset: fonts/DancingScript-VariableFont_wght.ttf
+      - asset: fonts/Pangolin-Regular.ttf
    - family: Pangolin
      fonts:
       - asset: fonts/Pangolin-Regular.ttf
